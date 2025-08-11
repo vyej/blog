@@ -15,9 +15,9 @@
 
     {% for post in posts %}
       {% if paginate > 0 %}
-        {% assign page_num = forloop.index0 | divided_by: paginate | plus: 30 %}
+        {% assign page_num = forloop.index0 | divided_by: paginate | plus: 1 %}
         {% assign route = '/' | append: cat %}
-        {% if page_num != 30 %}
+        {% if page_num != 1 %}
           {% assign route = route | append: paginate_path | replace: ':num', page_num %}
         {% endif %}
       {% endif %}

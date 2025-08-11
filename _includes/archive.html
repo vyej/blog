@@ -27,8 +27,8 @@
 
   {% for post in site.posts %}
     {% if paginate > 0 %}
-      {% assign page_num = forloop.index0 | divided_by: paginate | plus: 30 %}
-      {% if page_num == 30 %}
+      {% assign page_num = forloop.index0 | divided_by: paginate | plus: 1 %}
+      {% if page_num == 1 %}
         {% assign route = '/' %}
       {% else %}
         {% assign route = paginate_path | replace: ':num', page_num %}
