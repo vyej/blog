@@ -6,7 +6,7 @@
     </{% if site.seo %}h2{% else %}h1{% endif %}>
   </div>
 
-  {% assign paginate = site.tag.paginate | default: site.paginate  %}
+
   {% assign paginate_path = site.tag.paginate_path | default: site.paginate_path  %}
 
   {% for tag_posts in site.tags %}
